@@ -1,0 +1,13 @@
+name: CI
+2 on: [push]
+3 jobs:
+4 build:
+5 runs−on: ubuntu−latest
+6 steps:
+7 − uses: actions/checkout@v2
+8 − name: Встановлення Python
+9 uses: actions/setup−python@v2
+10 with:
+11 python−version: '3.x'
+12 − name: Запусктестів
+13 run: pytest
